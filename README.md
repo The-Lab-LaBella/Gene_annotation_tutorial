@@ -1,9 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
-
 # Gene_annotation_tutorial
 
 This tutorial is designed to guide you through the annotation of a specific gene of interest
@@ -171,17 +165,56 @@ I extracted each of the hits (sequences that pass the score threshold) as a fast
 | XYL2 | K05351 | 1057    | 2152     |
 | XYL3 | K00854 | 105     | 1137     |
 
-From this we can see that the XYL1 annotation counts did not change very much
-The XYL2 annotation doubled! This is likely due to the two peaks we included
-XYL3 annotation is greatly expanded. 
-
+From this we can see that the XYL1 annotation counts did not change very much The XYL2 annotation doubled! This is likely due to the two peaks we included XYL3 annotation is greatly expanded.
 
 Now let's check the length distribution of the sequences
 
 We can use bash to get the length of every sequences
 
-```
+```         
 awk '/^>/ {print; next; } { seqlen = length($0); print seqlen}' K00854.fasta > K00854.seqlen.txt
 ```
 
+We are analyzing the sequence length because *sometimes* the annotations (the hypotheses about *where* a gene is are incorrect)
 
+*K00854*
+
+Most sequences are around 600 amino acids long. However, you can see there are some really long, and some really short sequences
+
+5 sequences are \< 200aa 8 sequences are \> 800aa
+
+Let's take a closer look at the really short and really long sequences. To do this let's turn to a basic blast search on NCBI
+
+Short Sequence example: \>yHMPu5000040958_metschnikowia_andauensis_201018 g008773.m1
+
+![](images/short_Screenshot%202023-05-02%20142412.png){width="407"}
+
+The blast results indicate that this is likely a xylulokinase that is only half of the length of the predicted sequence.
+
+This could indicate that the gene is truly truncated OR it could indicate that the gene was mis-annotated.
+
+Long Sequence example: \>yHMPu5000034672_blastobotrys_parvus_160519 g001238.m1
+
+![](images/fusion_gene_Screenshot%202023-05-02%20142027.png){width="369"}
+
+The blast results indicate that this sequence contains *both* a xylulokinase and aAcyl-coenzyme A oxidase 2.
+
+In this case these sequences may need additional editing by hand. Likely at this point we would remove these and save them for subsequent editing by hand
+
+*K17743*
+
+In this case the distribution of lengths is very concentrated around 300aa
+
+There is 1 sequence under 200aa There are 2 sequences over 400aa
+
+The short sequence (yHMPu5000034631_martiniozyma_abiesophila_170307.haplomerger2 g002653.m1) is similar to the above scenario in which the gene is only partial
+
+![](images/short2.png){width="460"}
+
+The long sequence ( yHMPu5000034950_citeromyces_hawaiiensis_170307.haplomerger2 g005680.m1) is similar in that there are clearly two genes annotated in the long sequence. This case is slightly different in that part of each gene is missing. You can tell because the begining/end of the annotated genes are missing. In this case we would need to go back into the genome to get the correct sequence
+
+![](images/long_actually_fused.png){width="397"}
+
+*K05351*
+
+Similarly here we have a few long sequences and a few short sequences. The scenario is the same as in the above examples
