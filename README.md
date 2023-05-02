@@ -71,6 +71,18 @@ Imagine you are an alien and just got to earth. As a part of your research on ea
 
 Issues could arise if your reference photos are *too specific*. Imagine all the reference photos for "apples" are pictures of small green apples. Then when you pick up a big red apple, you may not realize that this is supposed to be an apple because it's not small and green.
 
+Reference Set:
+
+![](images/Green_apple_on_black_background.jpg){width="71"}
+
+![](images/apple2.jpeg){width="104"}
+
+![](images/apple-green_BDD1J1GEJO.jpg){width="104"}
+
+Object to classify:
+
+![](images/Red_Apple.jpg){width="155"}
+
 Another issue could arise if your reference photos are *too general*. Imagine if you were given a reference set of photos for a Tangelo (a fruit that is a cross between a Tangerine and a Grapefruit). If you pick up either a Tangerine or a Grapefruit you may put them in the same category.
 
 Both of these scenarios can occur in the annotation of the y1000+ genomes. Therefore we must *refine* the results of the KEGG analysis.
