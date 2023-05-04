@@ -211,7 +211,9 @@ awk '/^>/ {print; next; } { seqlen = length($0); print seqlen}' K00854.fasta > K
 
 We are analyzing the sequence length because *sometimes* the annotations (the hypotheses about *where* a gene is are incorrect)
 
-*K00854*
+***K00854***
+
+![](images/K00854_len.png){width="317"}
 
 Most sequences are around 600 amino acids long. However, you can see there are some really long, and some really short sequences
 
@@ -235,7 +237,9 @@ The blast results indicate that this sequence contains *both* a xylulokinase and
 
 In this case these sequences may need additional editing by hand. Likely at this point we would remove these and save them for subsequent editing by hand
 
-*K17743*
+***K17743***
+
+![](images/K17743_len.png){width="404"}
 
 In this case the distribution of lengths is very concentrated around 300aa
 
@@ -245,10 +249,30 @@ The short sequence (yHMPu5000034631_martiniozyma_abiesophila_170307.haplomerger2
 
 ![](images/short2.png){width="460"}
 
-The long sequence ( yHMPu5000034950_citeromyces_hawaiiensis_170307.haplomerger2 g005680.m1) is similar in that there are clearly two genes annotated in the long sequence. This case is slightly different in that part of each gene is missing. You can tell because the begining/end of the annotated genes are missing. In this case we would need to go back into the genome to get the correct sequence
+The long sequence ( yHMPu5000034950_citeromyces_hawaiiensis_170307.haplomerger2 g005680.m1) is similar in that there are clearly two genes annotated in the long sequence. This case is slightly different in that part of each gene is missing. You can tell because the beginning/end of the annotated genes are missing. In this case we would need to go back into the genome to get the correct sequence
 
 ![](images/long_actually_fused.png){width="397"}
 
-*K05351*
+***K05351***
+
+![](images/K05351_len.png){width="388"}
 
 Similarly here we have a few long sequences and a few short sequences. The scenario is the same as in the above examples
+
+Therefore, we will be taking only sequences that are 3 or fewer standard deviations from the mean. The removed sequences will be retained. These sequences likely need to be addressed by hand
+
+| Gene | KO     | KO_hits | HMM_Hits | Removed Hits | Remaining |
+|------|--------|---------|----------|--------------|-----------|
+| XYL1 | K17743 | 1332    | 1355     | 16           | 1339      |
+| XYL2 | K05351 | 1057    | 2152     | 23           | 2129      |
+| XYL3 | K00854 | 105     | 1137     | 25           | 1121      |
+
+### Step 7 - OrthoGroup Analysis 
+
+We may be able to further breakdown the results within each group as separate groups of Orthologs within the budding yeasts.
+
+We may be able to distinguish orthologs from paralogs using evolutionary analyses. To illustrate the difference between orthologs and paralogs see the image below
+
+![](images/Homology.png)
+
+Image from: https://bitesizebio.com/26762/homology-terminology-never-say-wrong-word/
