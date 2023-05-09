@@ -119,7 +119,11 @@ In our case let's start with the KEGG database XYL1 - K17743 XYL2 - K05351 XYL3 
 
 I searched for the KEGG annotations in our raw dataset and found this many sequences out of 1,154 species
 
-XYL1 - K17743 - 1332 XYL2 - K05351 - 1057 XYL3 - K00854 - 105
+| Xylose Gene | KEGG Orthology | Num of Seqs |
+|-------------|----------------|-------------|
+| XYL1        | K17743         | 1332        |
+| XYL2        | K05351         | 1057        |
+| XYL3        | K00854         | 105         |
 
 ### STEP 2 - Align reference seqs
 
@@ -267,7 +271,7 @@ Therefore, we will be taking only sequences that are 3 or fewer standard deviati
 | XYL2 | K05351 | 1057    | 2152     | 23           | 2129      |
 | XYL3 | K00854 | 105     | 1137     | 25           | 1121      |
 
-### Step 7 - OrthoGroup Analysis 
+### Step 7 - OrthoGroup Analysis
 
 We may be able to further breakdown the results within each group as separate groups of Orthologs within the budding yeasts.
 
@@ -275,4 +279,32 @@ We may be able to distinguish orthologs from paralogs using evolutionary analyse
 
 ![](images/Homology.png)
 
-Image from: https://bitesizebio.com/26762/homology-terminology-never-say-wrong-word/
+Image from: <https://bitesizebio.com/26762/homology-terminology-never-say-wrong-word/>
+
+Orthogroup analysis has been previously conducted using *every genome* in the y1000plus dataset. Therefore, we can just ask, what orthogroup does each sequence analyzed belong to. Orthogroup assignments are named after an arbitrary number and do not imply function
+
+| KEGG   | Orthogroup 1 (\# of sequences) | Orthogroup 2 (\# of sequences) |
+|--------|--------------------------------|--------------------------------|
+| K00854 | OG0003347 (1,063)              | OG0007516 (51)                 |
+| K05351 | OG0000277 (2,128)              | OG0000791 (3)                  |
+| K17743 | OG0000677 (2,343)              | *NA*                           |
+
+**K05351 results**
+
+K05351 falls into two Orthogroups (OGs). One has only three sequences - OG0000791. This OG is found in
+
+-   yHMPu5000038352_candida_sergipensis_180604
+
+-   yHMPu5000035276_Candida_spandovensis_SPADES
+
+-   yHMPu5000037239_wickerhamiella_brachini_210210
+
+Each of these genomes *also* has a representative sequence in the other OG (OG0000277). Interestingly these three species share a common ancestor. I appears as though there was a duplication event (duplciating OG0000277) in this common ancestor resulting in the creation of a paralog (OG0000791)
+
+![](images/duplication.png)
+
+As for the other orthogroup OG0000277 we can look at the annotations for *Saccharomyces cerevisiae* to get some guidance. Blast suggests that the three genes that fall in this OG are SOR1, SOR2 and XYL2. Interestingly, recent work suggests that SOR1, SOR2, and XYL3 may have the same function and have a complicated history that includes multiple duplication and loss events throughout the tree.
+
+**K00854 Results - TBD**
+
+**K17743 Results**
