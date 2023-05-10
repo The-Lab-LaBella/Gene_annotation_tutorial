@@ -73,15 +73,14 @@ Issues could arise if your reference photos are *too specific*. Imagine all the 
 
 Reference Set:
 
-![](images/Green_apple_on_black_background.jpg){width="71"}
+<img src="images/Green_apple_on_black_background.jpg" width="100">
+<img src="images/apple2.jpeg" width="100">
+<img src="images/apple-green_BDD1J1GEJO.jpg" width="100">
 
-![](images/apple2.jpeg){width="104"}
-
-![](images/apple-green_BDD1J1GEJO.jpg){width="104"}
 
 Object to classify:
+<img src="images/Red_Apple.jpg" width="150">
 
-![](images/Red_Apple.jpg){width="155"}
 
 Another issue could arise if your reference photos are *too general*. Imagine if you were given a reference set of photos for a Tangelo (a fruit that is a cross between a Tangerine and a Grapefruit). If you pick up either a Tangerine or a Grapefruit you may put them in the same category.
 
