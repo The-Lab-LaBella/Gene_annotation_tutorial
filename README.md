@@ -331,7 +331,7 @@ For any single gene annotation we want the following data
 
 -   FASTA sequences for each of the OGs identified within the analysis.
 
-In our example we this was the final sequence count
+In our example we this was the final sequence count. You can see we added sequences in all three!
 
 | Gene | KO     | KO_hits | HMM_Hits | Removed Hits | OG 1  | OG 2 |
 |------|--------|---------|----------|--------------|-------|------|
