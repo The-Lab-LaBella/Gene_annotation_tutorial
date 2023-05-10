@@ -79,6 +79,7 @@ Reference Set:
 
 
 Object to classify:
+
 <img src="images/Red_Apple.jpg" width="150">
 
 
@@ -86,19 +87,19 @@ Another issue could arise if your reference photos are *too general*. Imagine if
 
 Reference Set:
 
-![](images/51548612046_246244c48e_b.jpg){width="130"}
+<img src="images/51548612046_246244c48e_b.jpg" width="100">
+<img src="images/istockphoto-169950246-612x612.jpg" width="100">
+<img src="images/Tangelo-Tree.jpg)" width="100">
 
-![](images/istockphoto-169950246-612x612.jpg){width="90"}
-
-![](images/Tangelo-Tree.jpg){width="92"}
 
 Object to classify (tangerine):
 
-![](images/tangerine.jpg){width="173"}
+<img src="images/tangerine.jpg)" width="100">
 
 Object to classify (Grapefruit):
 
-![](images/grapefruit-california-production-fruit-department.jpg){width="190"}
+<img src="images/grapefruit-california-production-fruit-department.jpg)" width="100">
+
 
 Both of these scenarios can occur in the annotation of the y1000+ genomes. Therefore we must *refine* the results of the KEGG analysis.
 
