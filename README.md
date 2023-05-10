@@ -309,6 +309,32 @@ Each of these genomes *also* has a representative sequence in the other OG (OG00
 
 As for the other orthogroup OG0000277 we can look at the annotations for *Saccharomyces cerevisiae* to get some guidance. Blast suggests that the three genes that fall in this OG are SOR1, SOR2 and XYL2. Interestingly, recent work suggests that SOR1, SOR2, and XYL3 may have the same function and have a complicated history that includes multiple duplication and loss events throughout the tree.
 
-**K00854 Results - TBD**
+**K00854 Results**
+
+In this annotation there is one large OG and one small OG. Let's investigate the smaller OG (OG0007516) with only 51 sequences. Interestingly, all of these sequences belong to either *Wickerhamiella* or *Starmerella* species. Unlike the scenario above, when we use the Blast database to search these results we find that all 51 sequences closely match bacterial sequences!
+
+Interestingly, the clade that makes up the *Wickerhamiella* and *Starmerella* is known to be a hot-spot for Horizontal Gene Transfer (HGT: defined here: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4536854/> ). You can read more about HGT in the yeasts here: <https://www.sciencedirect.com/science/article/pii/S0959437X22000594>
+
+![](images/HGT.png){width="253"}
+
+It is likely that the ancestor of the *Starmerella* and *Wickerhamiella* acquired a bacterial copy of a gene that functions similarly to XYL3. If we were only searching for Eukaryotic genes in our initial search, we would have missed this!
 
 **K17743 Results**
+
+There is only one OG in this annotation. We don't need to further sub-divide the sequences.
+
+### Finalizing the data
+
+For any single gene annotation we want the following data
+
+-   FASTA sequences for sequences removed due to length issues. These will need to be analyzed by hand
+
+-   FASTA sequences for each of the OGs identified within the analysis.
+
+In our example we this was the final sequence count
+
+| Gene | KO     | KO_hits | HMM_Hits | Removed Hits | OG 1  | OG 2 |
+|------|--------|---------|----------|--------------|-------|------|
+| XYL1 | K17743 | 1332    | 1355     | 16           | 2,343 | NA   |
+| XYL2 | K05351 | 1057    | 2152     | 23           | 2,128 | 3    |
+| XYL3 | K00854 | 105     | 1137     | 25           | 1,063 | 51   |
