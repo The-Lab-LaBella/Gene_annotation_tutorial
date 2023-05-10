@@ -89,16 +89,16 @@ Reference Set:
 
 <img src="images/51548612046_246244c48e_b.jpg" width="100">
 <img src="images/istockphoto-169950246-612x612.jpg" width="100">
-<img src="images/Tangelo-Tree.jpg)" width="100">
+<img src="images/Tangelo-Tree.jpg" width="100">
 
 
 Object to classify (tangerine):
 
-<img src="images/tangerine.jpg)" width="100">
+<img src="images/tangerine.jpg" width="100">
 
 Object to classify (Grapefruit):
 
-<img src="images/grapefruit-california-production-fruit-department.jpg)" width="100">
+<img src="images/grapefruit-california-production-fruit-department.jpg" width="100">
 
 
 Both of these scenarios can occur in the annotation of the y1000+ genomes. Therefore we must *refine* the results of the KEGG analysis.
