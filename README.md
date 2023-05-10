@@ -181,15 +181,16 @@ For example see the HMM E-value distributions for our three searches. These valu
 
 For K00854 a histogram of the E.values shows that there is one peak around 1e-200. There is also another peak around 1e-15. We likely want only those that fall in the first peak
 
-![](images/K00854)
+<img src="images/K00854" width="200">
 
 For K05351 the histogram shows *two* peaks. One that is around 1e-200 and another that is closer to 1e-100. Why this is occurring is unclear at this point but we likely want both peaks
 
-![](images/K05351)
+<img src="images/K05351" width="200">
 
 For K17743 the histogram shows one clear peak and then lots of sequences around the bottom. The peak with the lowest values stretches from 1e-150 to 1e-200
 
-![](images/K17743)
+<img src="images/K17743" width="200">
+
 
 Based on these distribution I decided to filter the results with the following cutoffs K00854 - 1e-70 (1 peak) K05351 - 1e-70 (2 peaks) K17743 - 1e-110 (1 peak)
 
@@ -217,7 +218,8 @@ We are analyzing the sequence length because *sometimes* the annotations (the hy
 
 ***K00854***
 
-![](images/K00854_len.png){width="317"}
+<img src="images/K00854_len.png" width="300">
+
 
 Most sequences are around 600 amino acids long. However, you can see there are some really long, and some really short sequences
 
@@ -227,7 +229,7 @@ Let's take a closer look at the really short and really long sequences. To do th
 
 Short Sequence example: \>yHMPu5000040958_metschnikowia_andauensis_201018 g008773.m1
 
-![](images/short_Screenshot%202023-05-02%20142412.png){width="407"}
+<img src="images/short_Screenshot%202023-05-02%20142412.png" width="300">
 
 The blast results indicate that this is likely a xylulokinase that is only half of the length of the predicted sequence.
 
@@ -235,7 +237,7 @@ This could indicate that the gene is truly truncated OR it could indicate that t
 
 Long Sequence example: \>yHMPu5000034672_blastobotrys_parvus_160519 g001238.m1
 
-![](images/fusion_gene_Screenshot%202023-05-02%20142027.png){width="369"}
+<img src="images/fusion_gene_Screenshot%202023-05-02%20142027.png" width="300">
 
 The blast results indicate that this sequence contains *both* a xylulokinase and aAcyl-coenzyme A oxidase 2.
 
@@ -243,7 +245,7 @@ In this case these sequences may need additional editing by hand. Likely at this
 
 ***K17743***
 
-![](images/K17743_len.png){width="404"}
+<img src="images/K17743_len.png" width="300">
 
 In this case the distribution of lengths is very concentrated around 300aa
 
@@ -251,15 +253,16 @@ There is 1 sequence under 200aa There are 2 sequences over 400aa
 
 The short sequence (yHMPu5000034631_martiniozyma_abiesophila_170307.haplomerger2 g002653.m1) is similar to the above scenario in which the gene is only partial
 
-![](images/short2.png){width="460"}
+<img src="images/short2.png" width="300">
 
 The long sequence ( yHMPu5000034950_citeromyces_hawaiiensis_170307.haplomerger2 g005680.m1) is similar in that there are clearly two genes annotated in the long sequence. This case is slightly different in that part of each gene is missing. You can tell because the beginning/end of the annotated genes are missing. In this case we would need to go back into the genome to get the correct sequence
 
-![](images/long_actually_fused.png){width="397"}
+<img src="images/long_actually_fused.png" width="300">
+
 
 ***K05351***
 
-![](images/K05351_len.png){width="388"}
+<img src="images/K05351_len.png" width="300">
 
 Similarly here we have a few long sequences and a few short sequences. The scenario is the same as in the above examples
 
@@ -277,7 +280,8 @@ We may be able to further breakdown the results within each group as separate gr
 
 We may be able to distinguish orthologs from paralogs using evolutionary analyses. To illustrate the difference between orthologs and paralogs see the image below
 
-![](images/Homology.png)
+<img src="images/Homology.png" width="300">
+
 
 Image from: <https://bitesizebio.com/26762/homology-terminology-never-say-wrong-word/>
 
