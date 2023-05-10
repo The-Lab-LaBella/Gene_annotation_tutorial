@@ -315,7 +315,8 @@ In this annotation there is one large OG and one small OG. Let's investigate the
 
 Interestingly, the clade that makes up the *Wickerhamiella* and *Starmerella* is known to be a hot-spot for Horizontal Gene Transfer (HGT: defined here: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4536854/> ). You can read more about HGT in the yeasts here: <https://www.sciencedirect.com/science/article/pii/S0959437X22000594>
 
-![](images/HGT.png){width="253"}
+<img src="images/HGT.png" width="300">
+
 
 It is likely that the ancestor of the *Starmerella* and *Wickerhamiella* acquired a bacterial copy of a gene that functions similarly to XYL3. If we were only searching for Eukaryotic genes in our initial search, we would have missed this!
 
